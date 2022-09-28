@@ -1,6 +1,6 @@
 import React from 'react'
 import "../assets/CSS/style.css"
-import {Button, Form } from "react-bootstrap"
+import {Container, Row, Col, Button, Form } from "react-bootstrap"
 import axios from "axios"
 import { useNavigate } from 'react-router-dom';
 
@@ -20,8 +20,28 @@ function ContactUs() {
     }
   return (
       <>
-      <div className="backdrop">
+      <main className="postion">
+      <Container>
+        <Row>
+          <Col xs={7}  >
+            <div className="textAll">
+            <h1>ADDRESS</h1>
+            <h4>71 Pilgrim Avenue Chevy Chase</h4>
+            <h4>MD 20815</h4>
+            </div>
+            <div className="textAll">
+              <h1>PHONE</h1>
+              <h4>+713-621-7636</h4>
+            </div>
+            <div className="textAll">
+              <h1>EMAIL</h1>
+              <h4>Thompson@dayrep.com</h4>
+            </div>
+          </Col>
+          <Col xs={5}>
+            <div className="backdrop">
      <Form onSubmit={submit}>
+     <Form.Label>Leave us message</Form.Label>
      <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Name</Form.Label>
         <Form.Control type="text" placeholder="Name" name="name" />
@@ -41,7 +61,11 @@ function ContactUs() {
         Submit
       </Button>
     </Form>
-    </div>    
+    </div>    </Col>
+        </Row>
+      
+    </Container>
+    </main>
       </>
       
     
