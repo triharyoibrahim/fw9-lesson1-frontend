@@ -20,7 +20,7 @@ function ContactUs() {
     }
   return (
       <>
-      <main className="postion">
+      <main className="position">
       <Container>
         <Row>
           <Col xs={7}  >
