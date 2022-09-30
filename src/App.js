@@ -9,7 +9,7 @@ const App = () => {
   return (
   <BrowserRouter> 
     <Routes>
-    <Route path="contactus" element={<ContactUs />}/>
+    <Route path="" element={<ContactUs />}/>
     <Route path="listdata" element={<ListData />}/>
     </Routes>
   </BrowserRouter>

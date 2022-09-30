@@ -3,6 +3,8 @@ import "../assets/CSS/style.css"
 import {Container, Row, Col, Button, Form } from "react-bootstrap"
 import axios from "axios"
 import { useNavigate } from 'react-router-dom';
+import { SiGooglemaps,  } from "react-icons/si";
+import { FiPhone, FiMail } from "react-icons/fi";
 
 function ContactUs() {
     const navigate = useNavigate();
@@ -24,24 +26,41 @@ function ContactUs() {
       <Container>
         <Row>
           <Col xs={7}  >
-            <div className="textAll">
+            <Row>
+          <Col xs={2}>
+          <div className="textPosition"> 
+          <h1><SiGooglemaps /></h1>
+          </div>
+          <div className=" textPosition"> 
+          <h1><FiPhone /></h1>
+          </div>
+          <div className=" textPosition"> 
+          <h1><FiMail /></h1>
+          </div>
+          </Col>
+          <Col xs={10}>
+          <div className="textAll">
+            
             <h1>ADDRESS</h1>
             <h4>71 Pilgrim Avenue Chevy Chase</h4>
             <h4>MD 20815</h4>
             </div>
-            <div className="textAll">
+            <div className="textAll ">
               <h1>PHONE</h1>
               <h4>+713-621-7636</h4>
             </div>
-            <div className="textAll">
+            <div className="textAll ">
               <h1>EMAIL</h1>
               <h4>Thompson@dayrep.com</h4>
             </div>
           </Col>
+            </Row>
+            
+          </Col>
           <Col xs={5}>
             <div className="backdrop">
      <Form onSubmit={submit}>
-     <Form.Label>Leave us message</Form.Label>
+     <Form.Label className="textHead">LEAVE US MESSAGE</Form.Label>
      <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Name</Form.Label>
         <Form.Control type="text" placeholder="Name" name="name" />
@@ -58,7 +77,7 @@ function ContactUs() {
       </Form.Group>
       
       <Button variant="primary" type="submit">
-        Submit
+        SEND
       </Button>
     </Form>
     </div>    </Col>
