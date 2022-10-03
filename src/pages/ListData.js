@@ -8,6 +8,7 @@ function ListData() {
   useEffect(() => {
     axios.get('http://localhost:8085/contactus').then(({ data }) => {
       setData(data.results)
+      console.log(data.results)
     })
   }, [])
   return (
@@ -27,7 +28,7 @@ function ListData() {
       <tbody>
         <tr>
           <td>1</td>
-          <td>Mark</td>
+          <td>{data.name}</td>
           <td>Otto</td>
           <td>@mdo</td>
         </tr>
